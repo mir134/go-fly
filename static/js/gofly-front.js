@@ -28,16 +28,17 @@ function clickBtn(){
     $("#launchButton").on("click",function() {
         if (launchButtonFlag) return;
         var width=$(window).width();
-        if(width<768){
-            window.open(GOFLY_URL+'/chatIndex?kefu_id='+GOFLY_KEFU_ID+'&refer='+window.document.title);
-            return;
+        if(width>768){
+            width = 520
+            // window.open(GOFLY_URL+'/chatIndex?kefu_id='+GOFLY_KEFU_ID+'&refer='+window.document.title);
+            // return;
         }
         layer.open({
             type: 2,
             title: GOFLY_BTN_TEXT,
             closeBtn: 1, //不显示关闭按钮
             shade: 0,
-            area: ['520px', '530px'],
+            area: [width + 'px', '530px'],
             offset: 'rb', //右下角弹出
             anim: 2,
             content: [GOFLY_URL+'/chatIndex?kefu_id='+GOFLY_KEFU_ID+'&refer='+window.document.title, 'yes'], //iframe的url，no代表不显示滚动条
@@ -57,16 +58,17 @@ function clickBtn(){
 function showKefu(){
     if (launchButtonFlag) return;
     var width=$(window).width();
-    if(width<768){
-        window.open(GOFLY_URL+'/chatIndex?kefu_id='+GOFLY_KEFU_ID+'&refer='+window.document.title);
-        return;
+    if(width>768){
+        width = 520
+        // window.open(GOFLY_URL+'/chatIndex?kefu_id='+GOFLY_KEFU_ID+'&refer='+window.document.title);
+        // return;
     }
     layer.open({
         type: 2,
         title: GOFLY_BTN_TEXT,
         closeBtn: 1, //不显示关闭按钮
         shade: [0],
-        area: ['520px', '530px'],
+        area: [width + 'px', '530px'],
         offset: 'rb', //右下角弹出
         anim: 2,
         content: [GOFLY_URL+'/chatIndex?kefu_id='+GOFLY_KEFU_ID+'&refer='+window.document.title, 'yes'], //iframe的url，no代表不显示滚动条

@@ -3,8 +3,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="陶士涵">
-    <title>GO-FLY在线咨询</title>
+    <meta name="author" content="">
+    <title>在线咨询</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.13.1/lib/theme-chalk/index.css">
     <script src="/static/js/functions.js?v=0.1.1"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -15,17 +15,12 @@
     <link rel="stylesheet" href="/static/css/front.css?v=0.2.3" />
     <link rel="stylesheet" href="/static/css/common.css?v=0.2.3" />
 </head>
-<body>
+<body style="padding: 5px">
 <div id="app"  class="chatCenter">
     <template>
         <!--客服代码-->
         <div class="chatContext chatVisitorPage">
             <div class="chatBox">
-                <el-alert
-                        style="margin-bottom: 10px;font-size: 12px;"
-                        title="公告 : 访客您好，欢迎star fork github https://github.com/taoshihan1991/go-fly ，感谢您的支持。"
-                        type="success">
-                </el-alert>
                 <el-alert
                         style="margin-bottom: 10px;"
                         :title="chatTitle"
@@ -60,7 +55,7 @@
                 <el-button type="primary" class="chatBoxSendBtn" size="small" v-on:click="chatToUser">{{.SendBtn}}</el-button>
             </div>
             <div class="footContact clear">
-                <a href="https://github.com/taoshihan1991/go-fly" target="_blank">GO-FLY0.2.2客服陶士涵提供技术支持</a>
+
             </div>
         </div>
         <!--//客服代码-->
