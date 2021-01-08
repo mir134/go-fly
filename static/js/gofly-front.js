@@ -8,7 +8,13 @@ if (typeof GOFLY_KEFU_ID=="undefined"){
     var GOFLY_KEFU_ID="";
 }
 if (typeof GOFLY_BTN_TEXT=="undefined"){
-    var GOFLY_BTN_TEXT="Chat with me";
+    var GOFLY_BTN_TEXT="在线客服";
+}
+if (typeof GOFLY_TEXT=="undefined"){
+    var GOFLY_TEXT="text";
+}
+if (typeof GOFLY_IMG=="undefined"){
+    var GOFLY_IMG="16.jpg";
 }
 dynamicLoadCss(GOFLY_URL+"/static/css/gofly-front.css");
 if (typeof $!="function"){
@@ -24,7 +30,12 @@ if (typeof $!="function"){
 }
 
 function clickBtn(){
-    $('body').append('<div id="launchButton" class="launchButton animateUpDown"><div class="launchButtonText">'+GOFLY_BTN_TEXT+'</div></div>');
+    if (GOFLY_TEXT === 'text') {
+        $('body').append('<div id="launchButton" class="launchButton animateUpDown"><div class="launchButtonText">'+GOFLY_BTN_TEXT+'</div></div>');
+    } else if(GOFLY_TEXT === 'img') {
+        $('body').append('<div id="launchButton" class="animateUpDown"><div class="launchButtonImg" title="点击联系在线客服">' +
+            '<img src="/static/images/' + GOFLY_IMG + '" /></div></div>');
+    }
     $("#launchButton").on("click",function() {
         if (launchButtonFlag) return;
         var width=$(window).width();
