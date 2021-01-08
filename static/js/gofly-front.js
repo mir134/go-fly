@@ -34,7 +34,7 @@ function clickBtn(){
         $('body').append('<div id="launchButton" class="launchButton animateUpDown"><div class="launchButtonText">'+GOFLY_BTN_TEXT+'</div></div>');
     } else if(GOFLY_TEXT === 'img') {
         $('body').append('<div id="launchButton" class="animateUpDown"><div class="launchButtonImg" title="点击联系在线客服">' +
-            '<img src="/static/images/' + GOFLY_IMG + '" /></div></div>');
+            '<img src="'+ GOFLY_URL +'/static/images/' + GOFLY_IMG + '" /></div></div>');
     }
     $("#launchButton").on("click",function() {
         if (launchButtonFlag) return;
