@@ -11,7 +11,7 @@ if (typeof GOFLY_BTN_TEXT=="undefined"){
     var GOFLY_BTN_TEXT="在线客服";
 }
 if (typeof GOFLY_TEXT=="undefined"){
-    var GOFLY_TEXT="text";
+    var GOFLY_TEXT="img";
 }
 if (typeof GOFLY_IMG=="undefined"){
     var GOFLY_IMG="16.jpg";
